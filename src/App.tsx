@@ -1,6 +1,7 @@
 import { ErrorMessage } from "./components/ErrorMessage";
 import { Loader } from "./components/Loader";
-import { Product } from "./components/Product";
+import { Modal } from "./components/Modal";
+import { Product } from "./components/Product"
 import { useAxious } from "./hooks/useAxious";
 
 function App() {
@@ -11,7 +12,7 @@ function App() {
       {loading && <Loader />}
       {error && <ErrorMessage error={error}/>}
       { products.map(product => <Product product={product} key={product.id} />)}
-    
+    <Modal />
     </div>
   )
   
